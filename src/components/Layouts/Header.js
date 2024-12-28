@@ -13,11 +13,17 @@ export const Header = () => {
             <img src={Logo} className="h-18" alt="Flowbite Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
           </Link>
-          <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <span className="bi bi-gear-wide-connected cursor-pointer text-xl text-gray-700 dark:text-white mr-5"></span>
-            <span className="bi bi-search cursor-pointer text-xl text-gray-700 dark:text-white mr-5"></span>
-            <span className="bi bi-cart-fill cursor-pointer text-xl text-gray-700 dark:text-white mr-5"></span>
-            <span className="bi bi-person-circle cursor-pointer text-xl text-gray-700 dark:text-white mr-5"></span>
+          <div className="flex items-center relative">
+            <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-gear-wide-connected"></span>
+            <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search"></span>
+            <Link to="/cart" className="text-gray-700 dark:text-white mr-5">
+              <span className="text-2xl bi bi-cart-fill relative">
+                <span className="text-white text-sm absolute -top-1 left-2.5 bg-rose-500 px-1 rounded-full ">
+                  0
+                </span>
+              </span>
+            </Link>
+            <span className="bi bi-person-circle cursor-pointer text-2xl text-gray-700 dark:text-white"></span>
           </div>
         </div>
       </nav>
